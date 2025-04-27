@@ -10,7 +10,7 @@ afterEach(() => {
 
 describe("Github page tests", () => {
 beforeEach(async () => {
-  await page.goto("https://github.com/team");
+  await page.goto("https://github.com/team", {waitUntil: "networkidle2",});
 });
 
    test("The h1 header content", async () => {
